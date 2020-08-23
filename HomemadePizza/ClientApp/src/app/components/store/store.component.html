@@ -1,0 +1,8 @@
+<div class="wrapper">
+  <div *ngIf="!goods">
+    <span>Loading</span>
+  </div>
+  <div class="menu" *ngIf="goods">
+    <snippet class="item" [pizza]="pizza" *ngFor="let pizza of goods"></snippet>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+<div class="body">
+  <div class="label">
+    <label-component [value]="pizza.label"></label-component>
+  </div>
+  <div class="tumbnail">
+  </div>
+  <div class="info">
+    <div class="description">
+      <description-component [value]="pizza.description"></description-component>
+    </div>
+    <div class="price-block">
+      <div class="toCart">
+        <button-component (onClick)="addToCard()" label="Add To Cart"></button-component>
+      </div>
+      <div class="price">
+        <label-component [value]="price"></label-component> <label-component [value]="currencyName"></label-component>
+      </div>      
+    </div>
+  </div>
+</div>

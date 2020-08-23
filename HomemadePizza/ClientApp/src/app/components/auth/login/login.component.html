@@ -1,0 +1,22 @@
+<div class="body">
+    <div>
+      <div>
+        <label-component value="User name"></label-component>
+      </div>
+      <div>
+        <input-cmp (onChange)="handleNameChange($event)"></input-cmp>
+      </div>
+    </div>
+
+    <div>
+      <div>
+        <label-component value="Password"></label-component>
+      </div>
+      <div>
+        <input-cmp (onChange)="handlePwdChange($event)" type="password"></input-cmp>
+      </div>
+    </div>
+    <div>
+      <button-component (onClick)="login()" label="Login" [isSubmittable]="isValid()"></button-component>
+    </div>
+</div>

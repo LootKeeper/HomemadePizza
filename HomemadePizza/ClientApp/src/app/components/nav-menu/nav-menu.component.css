@@ -1,0 +1,59 @@
+.nav-container {
+  padding: 10px 10px 10px 10px;
+  border: 1px solid gray;
+  border-radius: 0px 0px 25px 25px;
+
+  height: 30px;
+
+  display: grid;
+  grid-template-areas: 'nav currency';
+  grid-template-columns: 90% 10%;
+  grid-column-gap: 25px;
+  align-content: center;
+}
+
+.nav {
+    grid-area: nav;
+
+    display: grid;
+    padding: 0px 20px 0px 20px;
+    grid-template-columns: 1fr 60px min-content min-content;
+    grid-column-gap: 10px;
+}
+
+.nav-item {
+    cursor: pointer;
+    justify-self: start;
+
+    overflow: hidden;
+    text-wrap: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.nav-item.reverse {
+    justify-self: end;
+}
+
+a.nav-link {
+  color: dimgray;
+}
+
+.link-active a.nav-link {
+  color: #c4c4c4;
+  text-decoration: none;
+}
+
+.currency {
+  grid-area: currency;
+}
+
+.currency-item {
+    color: dimgray;
+    cursor: pointer;
+}
+
+.currency-item.selected {
+    color: #c4c4c4;
+    text-decoration: none;
+}

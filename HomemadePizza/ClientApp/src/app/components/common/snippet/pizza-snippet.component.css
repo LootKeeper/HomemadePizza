@@ -1,0 +1,63 @@
+.body {
+  display: grid;
+  grid-template-areas: 'label' 'tumbnail' 'info';
+  grid-template-rows: min-content 200px min-content min-content;
+  grid-template-columns: 200px;
+  grid-row-gap: 10px;
+  border: 2px solid gray;
+  border-radius: 10px;
+  padding: 5px 15px 5px 15px;
+}
+
+.body:hover {
+    border: 2px solid #00ff21;
+}
+
+.label {
+    grid-area: label;
+}
+
+.tumbnail {
+  grid-area: tumbnail;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url('/assets/pizza.png');
+}
+
+.info {
+    grid-area: info;
+
+    display: grid;
+    grid-template-areas:
+        'description'
+        'priceblock';
+    grid-template-rows: repeat(2, min-content);
+    grid-row-gap: 5px;
+}
+
+.description {
+    grid-area: description;
+}
+
+.price-block {
+  grid-area: priceblock;
+
+  display: grid;
+  grid-template-areas: 'toCart price';
+  grid-template-columns: 75% 25%;
+  grid-column-gap: 10px;
+}
+
+.price {
+  grid-area: price;
+  justify-self: end;
+
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column-gap: 5px;
+}
+
+.toCart {
+    justify-self: start;
+    grid-area: toCart
+}
