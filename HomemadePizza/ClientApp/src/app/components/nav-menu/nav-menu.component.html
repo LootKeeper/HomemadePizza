@@ -4,18 +4,18 @@
       <a class="nav-link" [routerLink]="['/menu']">Menu</a>
     </div>
     <div class="nav-item" [routerLinkActive]="['link-active']">
-      <a class="nav-link">Cart <badge *ngIf="getGoodsInCartCount()" [label]="getGoodsInCartCount()"></badge> </a>
+      <a class="nav-link" [routerLink]="['/cart']">Cart <badge *ngIf="goodsCount" [label]="goodsCount"></badge> </a>
     </div>
-    <div *ngIf="!isUserLoggedIn()" class="nav-item reverse" [routerLinkActive]="['link-active']">
+    <div *ngIf="!isUserLoggedIn" class="nav-item reverse" [routerLinkActive]="['link-active']">
       <a class="nav-link" [routerLink]="['/login']">Login</a>
     </div>
-    <div *ngIf="!isUserLoggedIn()" class="nav-item" [routerLinkActive]="['link-active']">
+    <div *ngIf="!isUserLoggedIn" class="nav-item" [routerLinkActive]="['link-active']">
       <a class="nav-link" [routerLink]="['/register']">Register</a>
     </div>
-    <div *ngIf="isUserLoggedIn()" class="nav-item reverse">
-      <a class="nav-link link-active">{{ getUserName() }}</a>
+    <div *ngIf="isUserLoggedIn" class="nav-item reverse">
+      <a class="nav-link link-active">{{ userName }}</a>
     </div>
-    <div *ngIf="isUserLoggedIn()" class="nav-item">
+    <div *ngIf="isUserLoggedIn" class="nav-item">
       <a class="nav-link link-active" (click)="logout()">Logout</a>
     </div>
   </div>

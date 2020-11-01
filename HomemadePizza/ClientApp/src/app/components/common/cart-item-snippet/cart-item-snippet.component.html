@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="tumbnail"></div>
+  <div class="label">
+    <label-component [value]="label"></label-component>
+  </div>
+  <div class="info">
+    <div class="add">
+      <button-component (onClick)="handleInc()" label="Add"></button-component>
+    </div>
+    <div class="count">
+      <label-component [value]="count"></label-component>
+    </div>
+    <div>
+      <button-component (onClick)="handleDecr()" label="Remove"></button-component>
+    </div>
+  </div>
+</div>

@@ -1,6 +1,6 @@
 <body class="body">
   <div class="nav-menu">
-    <app-nav-menu></app-nav-menu>
+    <app-nav-menu [userName]="userName" [isUserLoggedIn]="isLoggedIn" [goodsCount]="goodsInCart"></app-nav-menu>
   </div>
   <div class="body-container">
     <router-outlet></router-outlet>

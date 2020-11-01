@@ -2,6 +2,7 @@ import { Inject, Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 
 import { Observable } from "rxjs";
+import { share } from 'rxjs/operators';
 
 import { Pizza } from "../models/pizza";
 
@@ -14,6 +15,6 @@ export default class StoreService {
   }
 
   getGoods(): Observable<Pizza[]> {
-    return this._http.get<Pizza[]>(this._baseUrl + 'api/store');
+    return this._http.get<Pizza[]>(this._baseUrl + 'api/store').pipe(share());
   }
 }

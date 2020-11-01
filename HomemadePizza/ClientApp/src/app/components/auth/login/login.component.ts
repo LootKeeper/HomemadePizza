@@ -20,16 +20,20 @@ export class LoginComponent {
     private _router: Router) { }
 
   isValid(): boolean {
-    return !!this.userName && !!this.password;
+    return this.userName
+      && this.userName.length > 0
+      && this.password
+      && this.password.length > 0;
   }
 
   login(): void {
+    if (!this.isValid()) return;
     this._loginService.login({
       name: this.userName,
       password: this.password
     }).subscribe(user => {
       if (user) {
-        this._userService.setUser(user);
+        this._userService._setUser(user);
         this._router.navigate(['/']);
       }
     })

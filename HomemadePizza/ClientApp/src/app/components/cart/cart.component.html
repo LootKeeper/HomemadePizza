@@ -1,10 +1,8 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title></title>
-</head>
-<body>
-
-</body>
-</html>
+<div class="wrapper">
+  <div *ngIf="!items || items.length === 0">
+    <span>Empty cart!</span>
+  </div>
+  <div *ngIf="items && items.length > 0">
+    <cart-item-snippet (incHandler)="increase($event)" (decrHandler)="decrease($event)" class="item" *ngFor="let item of items" [item]="item" ></cart-item-snippet>
+  </div>
+</div>

@@ -7,8 +7,8 @@ import { Component, Output, Input, EventEmitter } from "@angular/core";
 })
 export class ButtonComponent {
   @Input() label: string;
-  @Input() isSubmittable: boolean = true;
-  @Output() onClick = new EventEmitter();  
+  @Input() isSubmittable = true;
+  @Output() onClick = new EventEmitter();
 
   handleClick(): void {
     if (this.onClick) {

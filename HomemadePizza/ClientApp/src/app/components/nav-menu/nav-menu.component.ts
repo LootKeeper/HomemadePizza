@@ -1,38 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
-import OrderService from '../../services/order.service';
-import { PriceService } from '../../services/price.service';
-import { Currency } from '../../models/currency';
-import UserService from '../../services/user.service';
-import LoginService from '../../services/login.service';
+import { PriceService } from 'src/app/services/price.service';
+import UserService from 'src/app/services/user.service';
+
+import { Currency } from 'src/app/models/currency';
 
 @Component({
   selector: 'app-nav-menu',
   templateUrl: './nav-menu.component.html',
   styleUrls: ['./nav-menu.component.css']
 })
-export class NavMenuComponent implements OnInit {
+export class NavMenuComponent {
+
+  @Input() userName: string;
+  @Input() goodsCount: number;
+  @Input() isUserLoggedIn: boolean;
+
   constructor(
-    private _orderService: OrderService,
     private _priceService: PriceService,
-    private _userService: UserService,
-    private _loginService: LoginService) {
-  }
-
-  ngOnInit() {
-    this._userService.getUserInfo();
-  }
-
-  isUserLoggedIn(): boolean {
-    return this._userService.isLoggedIn();
-  }
-
-  getUserName(): string {
-    return this._userService.userName();
-  }
-
-  getGoodsInCartCount(): number {
-    return this._orderService.getGoodsCount();
+    private _userService: UserService) {
   }
 
   getCurrency(): Currency {
@@ -55,8 +41,6 @@ export class NavMenuComponent implements OnInit {
   }
 
   logout(): void {
-    this._loginService.logout().subscribe(() => {
-      this._userService.setUser(null);
-    })    
+    this._userService.logout();  
   }
 }

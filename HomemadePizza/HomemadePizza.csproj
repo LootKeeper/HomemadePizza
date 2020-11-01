@@ -38,7 +38,6 @@
     <None Remove="ClientApp\src\app\components\common\label\label.component.ts" />
     <None Remove="ClientApp\src\app\components\auth\login\login.component.ts" />
     <None Remove="ClientApp\src\app\components\store\store.component.ts" />
-    <None Remove="ClientApp\src\app\components\common\snippet\pizza-snippet.component.ts" />
     <None Remove="ClientApp\src\app\models\cartItem.ts" />
     <None Remove="ClientApp\src\app\models\currency.ts" />
     <None Remove="ClientApp\src\app\models\loginModel.ts" />
@@ -62,7 +61,7 @@
     <TypeScriptCompile Include="ClientApp\src\app\components\common\label\label.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\components\auth\login\login.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\components\store\store.component.ts" />
-    <TypeScriptCompile Include="ClientApp\src\app\components\common\snippet\pizza-snippet.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\components\common\pizza-snippet\pizza-snippet.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\models\cartItem.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\models\currency.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\models\loginModel.ts" />
